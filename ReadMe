@@ -1,6 +1,10 @@
 #start with
 
-docker run -d -e "THREADS=10" -e "OUTPUT_FILE=bitcoin-generator.sql" -e "FAKETIME=2011-05-10 22:11:11" --name bt-gen -v /home/customer/output:/opt/output bitcoin-generator:latest
+docker run -d -e "THREADS=10" -e "OUTPUT_FILE=bitcoin-generator.csv" -e "FAKETIME=2011-05-10 22:11:11" --name bt-gen -v /home/customer/output:/opt/output fabryprog/bitcoin-generator:latest
+
+#repository
+
+https://hub.docker.com/r/fabryprog/bitcoin-generator/
 
 #resources
 
