@@ -11,7 +11,10 @@ RUN make install
 WORKDIR /
 
 ADD bitcoin-tool /root/bitcoin-tool
-RUN chmod +x /root/bitcoin-tool 
+WORKDIR /root/bitcoin-tool
+RUN make test 
+
+WORKDIR /
 
 ADD core.sh /root/core.sh
 RUN chmod +x /root/core.sh
