@@ -3,9 +3,12 @@
 ## RUN
 
 ```sh
-docker run -d -e "THREADS=10" -e "FAKETIME=2011-05-10 22:11:11" --name bt-gen -v /home/customer/output:/opt/output fabryprog/bitcoin-generator:latest
+docker run -d -e "THREADS=10" -e "FAKETIME=2011-05-10 22:11:11" \
+   --name bt-gen -v /home/customer/output:/opt/output \
+   fabryprog/bitcoin-generator:latest
 ```
-Parameters:
+
+Enviroments:
  - THREADS, num of threads
  - FAKETIME, fake system time
 
