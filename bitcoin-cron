@@ -1,2 +1,2 @@
-* * * * * root sh /root/bitcoin-check.sh > /opt/output/`date +\%Y\%m\%d\%H\%M\%S`.txt 2>&1
-#0 0,12 * * * root sh /root/bitcoin-check.sh > /opt/output/`date +\%Y\%m\%d\%H\%M\%S`.txt  2>&1
+#* * * * * root sh /root/bitcoin-check.sh > /opt/output/`date +\%Y\%m\%d\%H\%M\%S`.txt 2>&1
+0 0,12 * * * root sh /root/bitcoin-check.sh > /opt/output/`date +\%Y\%m\%d\%H\%M\%S`.txt  2>&1

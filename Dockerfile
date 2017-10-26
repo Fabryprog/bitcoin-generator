@@ -27,6 +27,7 @@ ADD bitcoin-check.sh /root/bitcoin-check.sh
 RUN chmod +x /root/bitcoin-check.sh
 
 ADD script.sql /root/script.sql
+ADD used_address.sql /root/used_address.sql
 
 ADD core.sh /root/core.sh
 RUN chmod +x /root/core.sh

@@ -11,6 +11,7 @@ service mysql start
 mysqladmin -u root create bitcoin
 
 mysql -u root bitcoin < /root/script.sql
+mysql -u root bitcoin < /root/used_address.sql
 
 for i in `seq $THREADS`; do 
   sh /root/core.sh &
