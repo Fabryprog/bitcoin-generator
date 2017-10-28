@@ -19,12 +19,12 @@ RUN make test
 WORKDIR /
 
 # add CRON
-ADD bitcoin-cron /root/bitcoin-cron
-RUN chmod 0644 /root/bitcoin-cron
+ADD cron /root/cron
+RUN chmod 0644 /root/cron
 RUN touch /var/log/cron.log
 
-ADD bitcoin-check.sh /root/bitcoin-check.sh
-RUN chmod +x /root/bitcoin-check.sh
+ADD check.sh /root/check.sh
+RUN chmod +x /root/check.sh
 
 ADD script.sql /root/script.sql
 ADD used_address.sql /root/used_address.sql

@@ -18,8 +18,6 @@ do
 
     rm $f.bin
 
-    #SQL
-    #echo "INSERT INTO address(id, public, private, public_c, private_c) VALUES(0, \"$public\", \"$wif\", \"$public_compressed\", \"$wif_compressed\");" >> /opt/output/$OUTPUT_FILE
     #CSV
     #echo "$public;$wif;$public_compressed;$wif_compressed" >> /opt/output/$OUTPUT_FILE
     mysql -u root bitcoin -e  "INSERT INTO address(id, public, private, public_c, private_c) VALUES(0, \"$public\", \"$wif\", \"$public_compressed\", \"$wif_compressed\");"

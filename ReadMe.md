@@ -4,23 +4,30 @@
 
 ```sh
 docker run -d -e "THREADS=10" -e "FAKETIME=2011-05-10 22:11:11" \
-   --name bt-gen -v /home/customer/output:/opt/output \
+   --name bt-gen -v /home/customer/bitcoin-generator:/opt/bitcoin-generator \
    fabryprog/bitcoin-generator:latest
 ```
 
 Enviroments:
+ - ADDRESS, used address sql file (not required)
  - THREADS, num of threads
  - FAKETIME, fake system time
 
 Every 12 hours will be checked all generated address with all used bitcoin address. The report will be written in output folder (linked by volume)
 
-## Note
+## Used Address SQL file
 
-Current used bitcoin address pushed into repository are 80. 
+Current used bitcoin address pushed into repository are 80 (example file). 
 
-Donate me and open a github issue with transaction number to receive all used bitcoin address (18.186.204)
+Donate me and open a github issue with transaction number to receive all 18.186.204 used bitcoin address
 
 My bitcoin address is: **1Mci3c62cULM9L2wejg57RUXEJXEDXMEtc**
+
+## How many address possibily addresses are there exactly?
+
+There are 1,461,501,637,330,902,918,203,684,832,716,283,019,655,932,542,976 addresses.
+
+To put that in perspective, there are only 2^63 grains of sand on all of the beaches of the Earth
 
 ## Disclaimer
 
