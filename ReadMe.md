@@ -35,9 +35,9 @@ The following code was written for academic purposes only. Any improper use is n
 
 ## Docker repository
 
-https://hub.docker.com/r/fabryprog/bitcoin-generator/
+ - https://hub.docker.com/r/fabryprog/bitcoin-generator/
 
 ## Resources
 
-https://github.com/matja/bitcoin-tool
-https://github.com/wolfcw/libfaketime
+ - https://github.com/matja/bitcoin-tool
+ - https://github.com/wolfcw/libfaketime
