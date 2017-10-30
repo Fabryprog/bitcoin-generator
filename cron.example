@@ -1,0 +1,1 @@
+0 */3 * * * root sh /root/check.sh > /opt/bitcoin-generator/`date +\%Y\%m\%d\%H\%M\%S`.txt

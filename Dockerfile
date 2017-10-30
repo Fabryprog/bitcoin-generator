@@ -4,7 +4,6 @@ MAINTAINER fabryprog <fabryprog@gmail.com>
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install build-essential uuid-runtime openssl libssl-dev bsdmainutils -y
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-server
-RUN apt-get install -y -qq cron
 
 ADD libfaketime /root/libfaketime
 WORKDIR /root/libfaketime
@@ -17,11 +16,6 @@ WORKDIR /root/bitcoin-tool
 RUN make test 
 
 WORKDIR /
-
-# add CRON
-ADD cron /root/cron
-RUN chmod 0644 /root/cron
-RUN touch /var/log/cron.log
 
 ADD check.sh /root/check.sh
 RUN chmod +x /root/check.sh
