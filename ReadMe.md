@@ -13,7 +13,15 @@ Enviroments:
  - THREADS, num of threads
  - FAKETIME, fake system time
 
-Every 12 hours will be checked all generated address with all used bitcoin address. The report will be written in output folder (linked by volume)
+## REPORT 
+
+To report, you will set your cron outside container.
+
+Cron example:
+
+```sh
+0 */3 * * * docker exec -t bt-gen sh /root/check.sh > /opt/bitcoin-report/`date +\%Y\%m\%d\%H\%M\%S`.txt
+```
 
 ## Used Address SQL file
 
