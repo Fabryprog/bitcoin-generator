@@ -1,1 +1,0 @@
-0 */3 * * * docker exec -t bt-gen sh /root/check.sh > /home/customer/bitcoin-report/`date +\%Y\%m\%d\%H\%M\%S`.txt

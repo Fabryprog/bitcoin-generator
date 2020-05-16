@@ -4,7 +4,7 @@
 
 ```sh
 docker run -d -e "THREADS=10" -e "FAKETIME=2011-05-10 22:11:11" \
-   --name bt-gen -v /home/customer/bitcoin-generator:/opt/bitcoin-generator \
+   --name bt-gen -v /home/customer/bitcoin-generator:/opt/output \
    fabryprog/bitcoin-generator:latest
 ```
 
@@ -13,23 +13,11 @@ Enviroments:
  - THREADS, num of threads
  - FAKETIME, fake system time
 
-## REPORT 
+## OUTPUT
 
-To report, you will set your cron outside container.
+The script create more csv (for every day) contains the pairs
 
-Cron example:
-
-```sh
-0 */3 * * * docker exec -t bt-gen sh /root/check.sh > /opt/bitcoin-report/`date +\%Y\%m\%d\%H\%M\%S`.txt
-```
-
-## Used Address SQL file
-
-Current used bitcoin address pushed into repository are 80 (example file). 
-
-Donate me and open a github issue with transaction number to receive all 18.186.204 used bitcoin address
-
-My bitcoin address is: **1Mci3c62cULM9L2wejg57RUXEJXEDXMEtc**
+Note: date will be equals to passed fake time
 
 ## How many address possibily addresses are there exactly?
 
